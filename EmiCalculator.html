@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="emiCalc.js"></script>
+  <style type="text/css" media="screen">
+
+    .slider-width{
+        width: 50px;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>EMI Calculator</h2>
+  <ul class="nav nav-tabs">
+    <li><a data-toggle="tab" href="#newV">New Vehicle EMI Calculator</a></li>
+    <li><a data-toggle="tab" href="#oldV">Old Vehicle EMI Calculator</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="newV" class="tab-pane fade">
+      <h3>Enter details:</h3>
+       <p>Loan Amount : </p>
+            
+              <input style="width: 50%" value="0"   id="loanAmount"  type="range" min="0" max= "300000"  step="5000"  oninput="outputUpdate(this.value)">
+              
+              <output for="loanAmount" id="loanAmount1"> 0 </output>
+       <br>
+
+       <p>Rate of Interest</p>
+              
+              <input style="width: 50%" value="0"  id="ROI" type="range" min="5" max="15" step="0.5" oninput="outputUpdate1(this.value)">
+              
+              <output for="ROI" id="ROI1"> 0 </output>
+              <br>     
+
+       <p>Tenure(in months) </p>
+              
+              <input style="width: 50%" value="0" id="tenure" type="range" min="3" max="60" step="3" oninput="outputUpdate2(this.value)">
+              
+              <output for="tenure" id="tenure1"> 0 </output>
+              <br>  
+           <h3 id="Total">EMI per months = ₹ 0.00</h3>       
+    </div>
+
+
+    <div id="oldV" class="tab-pane fade">
+        <h3>Enter details:</h3>
+         <p>Loan Amount : </p>
+              
+                <input style="width: 50%" value="0"   id="loanAmount2"  type="range" min="0" max= "300000"  step="5000"  oninput="outputUpdate3(this.value)">
+                
+                <output for="loanAmount2" id="loanAmount3"> 0 </output>
+         <br>
+  
+         <p>Rate of Interest</p>
+                
+                <input style="width: 50%" value="0"  id="ROI2" type="range" min="8" max="18" step="0.5" oninput="outputUpdate4(this.value)">
+                
+                <output for="ROI2" id="ROI3"> 0 </output>
+                <br>     
+  
+         <p>Tenure(in months) </p>
+                
+                <input style="width: 50%" value="0" id="tenure2" type="range" min="3" max="60" step="3" oninput="outputUpdate5(this.value)">
+                
+                <output for="tenure2" id="tenure3"> 0 </output>
+                <br>  
+        <p>Enter  </p>
+
+             <h3 id="Total1">EMI per months = ₹ 0.00</h3>       
+      </div>
+      
+    </div>
+    
+  </div>
+</div>
+
+</body>
+</html>
